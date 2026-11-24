@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+import java.util.Map;
+public class Main
+{
+	public static void main(String[] args) {
+	    String str="JAVA";
+	    ArrayList<Character> arr=new ArrayList<>();
+	    for(int i=0;i<str.length();i++){
+	        arr.add(str.charAt(i));
+	    }
+	    arr.set(1,'e');
+	    for(char ch:arr){
+	        System.out.print(ch);
+	        }
+	    
+	}
+}
