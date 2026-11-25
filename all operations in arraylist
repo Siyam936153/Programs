@@ -1,0 +1,85 @@
+import java.util.Collections;
+import java.util.ArrayList;
+public class Main
+{
+	public static void main(String[] args) {
+	    ArrayList<String> arr=new ArrayList<>();
+	    arr.add("sam");
+	    arr.add("sej");
+	    arr.add("moh");
+	    arr.add("sur");
+	    arr.add("sho");
+	    System.out.println("1.Print all the element in the list");
+	    System.out.println(arr);
+	   
+	    System.out.println("2.Add a new student name at the second position");
+	    arr.add(2,"par");
+	    System.out.println(arr);
+	   
+	   System.out.println("3.Replace the third student's name with Arun");
+	   arr.set(3,"Arun");
+	   System.out.println(arr);
+	   
+	   System.out.println("4.Check whether \"Arun\" exists in the list");
+	   arr.set(3,"Arun");
+	   System.out.println(arr);
+	    if(arr.contains("Arun")){
+		System.out.println("yes");
+	}else{
+	    System.out.print("No");
+	}
+
+System.out.println("5.Find and print the size of the ArrayList");
+	   System.out.println(arr.size());
+
+	   System.out.println("6.Print the first student name.");
+	   System.out.println(arr.get(0));
+	   
+	   System.out.println("7.Print the last student name.");
+	   System.out.println(arr.get(arr.size()-1));
+	   
+	   System.out.println("8.Remove one name from the list");
+	   System.out.println("before removing element in the list:"+arr);
+	   arr.remove("sur");
+	   System.out.println("after removing element in the list: "+arr);
+	   
+	   System.out.println("9.Remove the student at index 2");
+	   System.out.println("before removing element in the list:"+arr);
+	   arr.remove(2);
+	   System.out.println("after removing element in the list: "+arr);
+	   
+	   System.out.println("10.Check whether the ArrayList is empty.");
+	   System.out.println(arr.isEmpty());
+	   
+	   System.out.println("11.Print all student names using a normal for loop");
+	   for(int i=0;i<arr.size();i++){
+	   System.out.println(arr.get(i));
+	   }
+	   
+	    System.out.println("12.Print all student names using an enhanced for loop");
+	   for(String str:arr){
+	   System.out.println(str);
+	}
+	
+	   System.out.println("13.Sort all student names in alphabetical order.");
+	   System.out.println("before sorting: "+arr);
+	   Collections.sort(arr);
+	   System.out.println("after sorting: "+arr);
+	   
+	   System.out.println("14.creating second array list add elements");
+	   ArrayList<String> list=new ArrayList<>();
+	   list.add("val");
+	   list.add("kar");
+	   list.add("mala");
+	   System.out.println(list);
+	   
+	  System.out.println("15.Add all elements of the second ArrayList to the first ArrayList");
+	  arr.addAll(list);
+	  System.out.println(arr);
+	  
+	   System.out.println("16.Remove all elements from the second ArrayList");
+	  list.clear();
+	  System.out.println(list);
+	  
+	}
+}
