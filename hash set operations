@@ -1,0 +1,75 @@
+import java.util.HashSet;
+import java.util.ArrayList;
+public class Main
+{
+	public static void main(String[] args) {
+	    HashSet<Integer> h=new HashSet<>();
+	    h.add(123);
+	    h.add(456);
+	    h.add(345);
+	    h.add(567);
+	    h.add(467);
+	    System.out.println("1.Add 5 student ID numbers to the HashSet.");
+		System.out.println(h);
+
+System.out.println("2.Add a duplicate student ID and check whether it gets added.");
+        h.add(456);
+		System.out.println(h);
+
+System.out.println("3.Check whether student id exists in the HashSet.");
+        if(h.contains(123)){
+            System.out.println("exists");
+        }else{
+		System.out.println("not exists");
+        }
+
+System.out.println("4.Find and print the size of the HashSet.");
+      System.out.println(h.size());
+
+System.out.println("5.Remove student ID  from the HashSet.");
+      System.out.println("before remove elements: "+h);
+      h.remove(123);
+      System.out.println("after remove elements: "+h);
+
+System.out.println("6.Print all student IDs using an enhanced for loop");
+      for(int id:h){
+      System.out.println(id);
+      }
+       
+      System.out.println("7.Check whether the HashSet is empty.");
+      System.out.println(h.isEmpty());
+    
+     System.out.println("8.Create another HashSet containing 3 student ID numbers.");
+      HashSet<Integer> h1=new HashSet<>();
+      h1.add(567);
+      h1.add(890);
+      h1.add(789);
+      System.out.println(h1);
+       
+      System.out.println("9.Add all elements of the second HashSet to the first HashSet.");
+      h.addAll(h1);
+      System.out.println(h);
+     
+     System.out.println("10.Check whether the first HashSet contains all elements of the second HashSet using containsAlll()lst HashSet.");
+      if(h.containsAll(h1)){
+      System.out.println("yes");
+      }
+       
+        System.out.println("11.Remove all elements of the second HashSet from the first HashSet using removeAll().");
+      h.removeAll(h1);
+      System.out.println(h);
+    
+    System.out.println("12.Retain only the common elements between the two HashSets using retainAll().");
+      h.retainAll(h1);
+      System.out.println(h);
+    
+    System.out.println("13.Convert the HashSet into an ArrayList");
+    ArrayList<Integer> list=new ArrayList<>(h);
+      System.out.println(list);
+    
+     System.out.println("14.Clear the first HashSet");
+     h.clear();
+      System.out.println(h);
+       
+	}
+}
